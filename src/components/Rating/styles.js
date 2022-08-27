@@ -6,9 +6,12 @@ export const RatingStyles = styled.span`
   font-weight: bold;
   border-radius: 5px;
   margin-top: 0.6rem;
-  padding: 3px;
-  display: block;
+  padding: 3px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 30px;
-  height: 20px;
+  .star {
+    margin-left: 3px;
+  }
 `;

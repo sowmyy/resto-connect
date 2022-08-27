@@ -3,6 +3,8 @@ import { data } from './restaurants.js';
 import { RestaurantsContainer, RestaurantStyles } from './styles';
 import RestaurantCard from 'components/RestaurantCard';
 import Loader from 'components/Loader';
+import GoogleMapMarkers from 'components/GoogleMapMarkers';
+
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
@@ -113,11 +115,11 @@ function reducerFn(state, action) {
 
 function Restaurants() {
   const [isPureVeg, setIsPureVeg] = useState(false);
-  const [apiState, dispatch] = useReducer(reducerFn, initialState);
+  const [dataState, dispatch] = useReducer(reducerFn, initialState);
   const [selectedSort, setSelectedSort] = useState('Name');
   const [selectedRating, setSelectedRating] = useState('3');
   const [resetAll, setResetAll] = useState(false);
-  console.log('apiState', apiState);
+  console.log('dataState', dataState);
 
   const resetAllFunction = () => {
     setResetAll(true);
@@ -155,7 +157,7 @@ function Restaurants() {
 
   useEffect(() => {
     if (isPureVeg) {
-      const result = apiState.data.filter((item) => item.type == 'veg');
+      const result = dataState.data.filter((item) => item.type == 'veg');
       // setRestaurantData(result);
       dispatch({
         type: 'SELECT_VEG_RESTAURANTS',
@@ -178,6 +180,8 @@ function Restaurants() {
     }
   }, [resetAll]);
 
+
+
   const createRestaurant = (obj) => {
     dispatch({
       type: "CREATE_RESTAURANT",
@@ -189,6 +193,7 @@ function Restaurants() {
     <RestaurantStyles isPureVeg={isPureVeg}>
       <div className="contentWrapper">
         <h1 className="pageTitle">Chennai Restaurants</h1>
+        {/* <GoogleMapMarkers data={dataState.data} /> */}
         <div className="filters">
           <div className="label">Sort by: </div>
           <Dropdown options={sortList} onChange={onChangeSortValue} value={selectedSort} placeholder="Select an option" />
@@ -199,8 +204,8 @@ function Restaurants() {
         </div>
         <div onClick={() => setIsPureVeg(!isPureVeg)} className="filterItem">Pure Veg</div>
         <div onClick={resetAllFunction} className="filterItem reset">Reset all filters and sorts</div>
-        {apiState.data.length > 0 ? <RestaurantsContainer>
-          {apiState.data.map((item) => (
+        {dataState.data.length > 0 ? <RestaurantsContainer>
+          {dataState.data.map((item) => (
             <RestaurantCard
               key={item.id}
               data={item}

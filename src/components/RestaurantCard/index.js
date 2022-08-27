@@ -1,10 +1,15 @@
 import { RestaurantCardStyles } from './styles';
 import coverImg from 'images/cover.jpg';
 import Rating from 'components/Rating';
+import { useNavigate } from 'react-router-dom';
 
 export default function RestaurantCard(props) {
+  let navigate = useNavigate();
+  const redirectToRestaurant = (obj) => {
+    navigate(`/restaurant/${obj.id}`)
+  }
   return (
-    <RestaurantCardStyles coverImg={coverImg}>
+    <RestaurantCardStyles coverImg={coverImg} onClick={() => redirectToRestaurant(props.data)}>
       <img className="cardCoverImg" src={coverImg} />
       <div className="cardContent">
         <div className="titleContent">
