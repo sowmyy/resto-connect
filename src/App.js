@@ -1,7 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import { Link } from "react-router-dom";
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import { useState } from 'react';
+import Restaurants from './container/Restaurants';
+import Dashboard from './container/Dashboard';
+import Search from './container/Search';
 
 function App() {
   return (
@@ -14,7 +21,7 @@ function App() {
               paddingBottom: "1rem",
             }}
           >
-            <Link to="/restaurants">Restaurants</Link> |{" "}
+          <Link to="/restaurants">Restaurants</Link> |{" "}
           <Link to="/dashboard">Dashboard</Link> |{" "}
           <Link to="/search">Search</Link>
         </nav>

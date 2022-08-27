@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -14,16 +14,17 @@ import {
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="restaurants" element={<Restaurants />} />
-          <Route path="search" element={<Search />} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="restaurants" element={<Restaurants />} />
+        <Route path="search" element={<Search />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
