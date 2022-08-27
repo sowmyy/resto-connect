@@ -16,12 +16,19 @@ export const RestaurantStyles = styled.div`
     padding-right: 5%;
   }
   .filterItem {
-    margin-top: 20px;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
     border: 1px solid grey;
-    padding: 10px;
+    padding: 0.8rem;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 0.8rem;
     cursor: pointer;
+    &.reset {
+      background-color: #cb202d;
+      color: white;
+      border: none;
+      font-weight: bold;
+    }
     ${props => props.isPureVeg && `
       border: none;
       background: #282c34;
@@ -32,8 +39,13 @@ export const RestaurantStyles = styled.div`
   .filters {
     display: flex;
     align-items: center;
+    margin-top: 1rem;
+    .Dropdown-control {
+      cursor: pointer;
+    }
     .label {
-      margin-left: 20px;
+      margin-left: 1rem;
+      margin-right: 1rem;
       font-weight: bold;
       :first-child{
         margin-left: 0;

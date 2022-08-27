@@ -3,18 +3,23 @@ import styled from 'styled-components';
 export const RestaurantCardStyles = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 3%;
-  margin-bottom: 6%;
+  margin-right: 4%;
+  margin-bottom: 4%;
   cursor: pointer;
-  max-width: 30%;
+  width: 20%;
   .cardCoverImg {
-    width: 75%;
     border-radius: 1rem;
   }
   .cardContent {
     margin-top: 1rem;
+    .titleContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
     .cardName {
       margin: 0;
+      max-width: 75%;
       font-size: 1.2rem;
     }
     .cuisineItem {
