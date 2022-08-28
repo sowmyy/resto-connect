@@ -16,7 +16,7 @@ export default function RestaurantCard(props) {
     navigate(`/restaurant/${obj.id}`)
   }
   return (
-    <RestaurantCardStyles coverImg={coverImg} onClick={() => redirectToRestaurant(props.data)}>
+    <RestaurantCardStyles dataId={props.index} coverImg={coverImg} onClick={() => redirectToRestaurant(props.data)}>
       <img className="cardCoverImg" src={coverImg} />
       <div className="cardContent">
         <div className="titleContent">

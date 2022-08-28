@@ -1,6 +1,26 @@
 import styled from 'styled-components';
 
+export const BarGraphStyles = styled.div`
+  margin-left: 12%;
+  margin-top: 2%;
+  padding-bottom: 5%;
+  .rv-xy-plot__axis__line {
+    stroke: black;
+  }
+  .rv-xy-plot__grid-lines__line {
+    stroke: #ccc;
+  }
+`;
+
 export const DashboardStyles = styled.div`
+  .heading {
+    padding-left: 11.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    span {
+      font-weight: normal;
+    }
+  }
   .contentWrapper {
     .pageTitle {
       margin-top: 7%;
@@ -8,7 +28,7 @@ export const DashboardStyles = styled.div`
       font-size: 3rem;
       color: #444;
     }
-    padding-left: 15%;
+    padding-left: 10%;
     padding-right: 5%;
   }
 `;

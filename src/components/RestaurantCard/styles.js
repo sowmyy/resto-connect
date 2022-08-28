@@ -6,7 +6,11 @@ export const RestaurantCardStyles = styled.div`
   margin-right: 4%;
   margin-bottom: 4%;
   cursor: pointer;
-  width: 20%;
+  width: 12%;
+  opacity: 0;
+  ${props => props.dataId}
+  animation: ${props => `popIn 0.3s ease-in ${0.2 * props.dataId}s forwards`};
+  -webkit-animation: ${props => `popIn 0.5s ease-in ${0.2 * props.dataId}s forwards`};
   .cardCoverImg {
     border-radius: 1rem;
   }
@@ -32,10 +36,10 @@ export const RestaurantCardStyles = styled.div`
   }
   @keyframes popIn {
     from {
-      transform: scale(0);
+      opacity: 0;
     }
     to {
-      transform: scale(1);
+      opacity: 1;
     }
   }
 `;

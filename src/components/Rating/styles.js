@@ -15,4 +15,7 @@ export const RatingStyles = styled.span`
   .star {
     margin-left: 3px;
   }
+  ${props => props.marginTop && `
+    margin-top: 2rem;
+  `}
 `;

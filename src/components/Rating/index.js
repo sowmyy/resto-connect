@@ -3,8 +3,8 @@ import { AiFillStar } from "react-icons/ai";
 
 export default function Rating(props) {
   return (
-    <RatingStyles>
-      {props.data}
+    <RatingStyles marginTop={props.marginTop}>
+      <span>{props.data}</span>
       <AiFillStar className="star" />
     </RatingStyles>
   );

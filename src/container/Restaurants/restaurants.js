@@ -49,8 +49,8 @@ export const data = {
       }
     ],
     "priceForTwo": 600,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.961880,
+    "longitude": 80.187559
   },
   {
     "id": 3,
@@ -75,8 +75,8 @@ export const data = {
       }
     ],
     "priceForTwo": 600,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.980263,
+    "longitude": 80.199015
   },
   {
     "id": 4,
@@ -101,8 +101,8 @@ export const data = {
       }
     ],
     "priceForTwo": 500,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.9665778,
+    "longitude": 80.1883879
   },
   {
     "id": 5,
@@ -127,8 +127,8 @@ export const data = {
       }
     ],
     "priceForTwo": 200,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.96474,
+    "longitude": 80.21204
   },
   {
     "id": 6,
@@ -153,8 +153,8 @@ export const data = {
       }
     ],
     "priceForTwo": 200,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.99103,
+    "longitude": 80.21712
   },
   {
     "id": 7,
@@ -179,8 +179,8 @@ export const data = {
       }
     ],
     "priceForTwo": 250,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.99097,
+    "longitude": 80.21682
   },
   {
     "id": 8,
@@ -205,8 +205,8 @@ export const data = {
       }
     ],
     "priceForTwo": 350,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.965920,
+    "longitude": 80.202568
   },
   {
     "id": 9,
@@ -231,8 +231,8 @@ export const data = {
       }
     ],
     "priceForTwo": 250,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.9938141,
+    "longitude": 80.2179772
   },
   {
     "id": 10,
@@ -257,8 +257,8 @@ export const data = {
       }
     ],
     "priceForTwo": 400,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 13.0084814,
+    "longitude": 80.2105072
   },
   {
     "id": 11,
@@ -283,8 +283,8 @@ export const data = {
       }
     ],
     "priceForTwo": 650,
-    "latitude": 12.957485,
-    "longitude": 80.186764
+    "latitude": 12.998237,
+    "longitude": 80.201524
   }
 ]
 }

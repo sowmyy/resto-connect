@@ -7,13 +7,17 @@ export const RestaurantsContainer = styled.div`
 `;
 
 export const RestaurantStyles = styled.div`
+  .filtersWrapper {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: baseline;
+  }
   .contentWrapper {
     .pageTitle {
-      margin-top: 7%;
       font-size: 3rem;
       color: #444;
     }
-    padding-left: 15%;
+    padding-left: 10%;
     padding-right: 5%;
   }
   .filterItem {
@@ -40,6 +44,7 @@ export const RestaurantStyles = styled.div`
   .filters {
     display: flex;
     align-items: center;
+    margin-right: 20px;
     margin-top: 1rem;
     .Dropdown-control {
       cursor: pointer;

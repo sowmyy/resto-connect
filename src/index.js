@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Restaurants from './container/Restaurants';
-import RestaurantPage from './container/RestaurantPage';
-import Dashboard from './container/Dashboard';
-import Search from './container/Search';
+import Home from 'container/Home'; 
 import {
   BrowserRouter,
   Routes,
@@ -18,15 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="restaurants" element={<Restaurants />} />
-        <Route path="restaurant/:id" element={<RestaurantPage />} />
-        <Route path="search" element={<Search />} />
-      </Routes>
-    </BrowserRouter>
+    <Home />
   </React.StrictMode>
 );
 

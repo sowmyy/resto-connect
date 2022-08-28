@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 export const SearchStyles = styled.div`
   .contentWrapper {
-    padding-left: 15%;
+    padding-left: 10%;
     padding-right: 5%;
     .pageTitle {
-      margin-top: 7%;
+      margin: 0;
+      margin-bottom: 2rem;
+      padding-top: 7%;
       font-size: 3rem;
       color: #444;
     }

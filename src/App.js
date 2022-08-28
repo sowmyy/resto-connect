@@ -5,16 +5,17 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Restaurants from './container/Restaurants';
 import Dashboard from './container/Dashboard';
 import Search from './container/Search';
 import { addAnalyticsData } from 'utils/helpers';
 
-function App() {
+function App(props) {
   const addAnalytics = (type) => {
     addAnalyticsData(type);
   }
+
   return (
     <div className="App">
       <header className="App-header">

@@ -6,6 +6,7 @@ import { data } from 'container/Restaurants/restaurants.js';
 import coverImg from 'images/cover.jpg';
 import Rating from 'components/Rating';
 import Loader from 'components/Loader';
+import { addToSearchAnalytics } from 'utils/helpers';
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,7 +14,7 @@ export default function Search() {
 
   useEffect(() => {
     if (searchTerm.length >= 3) {
-      setDataToShow(searchRestaurants(searchTerm));
+      searchRestaurants(searchTerm);
     } else if (searchTerm.length == 0) {
       setDataToShow(data.restaurants);
     }
@@ -21,6 +22,9 @@ export default function Search() {
 
   const changeSearchTerm = (event) => {
     setSearchTerm(event.target.value);
+    if (event.target.value.length >= 4) {
+      addToSearchAnalytics(event.target.value);
+    }
   }
 
   const clearSearchTerm = () => {
@@ -28,20 +32,20 @@ export default function Search() {
   }
 
   const searchRestaurants = (searchTerm) => {
-    data.restaurants.find((item) => {
-      item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const result = data.restaurants.filter((item) => {
+      return item.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
+    setDataToShow(result);
   }
-
   return (
     <SearchStyles>
       <div className="contentWrapper">
         <h2 className="pageTitle">Search</h2>
         <div className="inputWrapper">
-          <SearchBar value={searchTerm} onChange={changeSearchTerm} type="text" placeholder="Search for restaurants" />
+          <SearchBar autoFocus value={searchTerm} onChange={changeSearchTerm} type="text" placeholder="Search for restaurants" />
           {searchTerm.length > 0 ? <GrClose onClick={clearSearchTerm} className="icon" /> : <BsSearch onClick={searchRestaurants} className="icon" />}
         </div>
-        {dataToShow && dataToShow.length >= 0 ?
+        {dataToShow.length > 0 ?
           dataToShow.map((item) => (
             <ListCard key={item.id}>
               <img className="cardCoverImg" src={coverImg} />
@@ -59,7 +63,7 @@ export default function Search() {
               </div>
             </ListCard>
           ))
-        : <Loader />}
+        : (searchTerm.length > 0 && dataToShow.length == 0) ? <Loader noResults/> : <Loader />}
       </div>
     </SearchStyles>
   );
