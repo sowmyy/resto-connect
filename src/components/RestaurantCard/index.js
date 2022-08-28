@@ -2,10 +2,17 @@ import { RestaurantCardStyles } from './styles';
 import coverImg from 'images/cover.jpg';
 import Rating from 'components/Rating';
 import { useNavigate } from 'react-router-dom';
+import { addToLocalStorage } from 'utils/helpers';
 
 export default function RestaurantCard(props) {
   let navigate = useNavigate();
   const redirectToRestaurant = (obj) => {
+    const data = {
+      restaurantId: obj.id,
+      restaurantName: obj.name,
+      type: "clickCount"
+    }
+    addToLocalStorage(data);
     navigate(`/restaurant/${obj.id}`)
   }
   return (

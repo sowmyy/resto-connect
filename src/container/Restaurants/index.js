@@ -4,14 +4,14 @@ import { RestaurantsContainer, RestaurantStyles } from './styles';
 import RestaurantCard from 'components/RestaurantCard';
 import Loader from 'components/Loader';
 import GoogleMapMarkers from 'components/GoogleMapMarkers';
-
+import { addToLocalStorage } from 'utils/helpers.js';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 const initialState = {
   data: data.restaurants,
   searchTerm: ""
-};
+}; 
 
 const sortList = [
   {
@@ -119,7 +119,6 @@ function Restaurants() {
   const [selectedSort, setSelectedSort] = useState('Name');
   const [selectedRating, setSelectedRating] = useState('3');
   const [resetAll, setResetAll] = useState(false);
-  console.log('dataState', dataState);
 
   const resetAllFunction = () => {
     setResetAll(true);
