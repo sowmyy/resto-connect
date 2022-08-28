@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
 export const DashboardStyles = styled.div`
-  .pageTitle {
-    margin: 1.5rem;
-    font-size: 2.5rem;
-    color: #444;
+  .contentWrapper {
+    .pageTitle {
+      margin-top: 7%;
+      margin-left: 1.5rem;
+      font-size: 3rem;
+      color: #444;
+    }
+    padding-left: 15%;
+    padding-right: 5%;
   }
 `;
 

@@ -11,7 +11,7 @@ import 'react-dropdown/style.css';
 const initialState = {
   data: data.restaurants,
   searchTerm: ""
-}; 
+};
 
 const sortList = [
   {

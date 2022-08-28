@@ -11,6 +11,7 @@ export const RestaurantStyles = styled.div`
     .pageTitle {
       margin-top: 7%;
       font-size: 3rem;
+      color: #444;
     }
     padding-left: 15%;
     padding-right: 5%;

@@ -11,6 +11,7 @@ export const RatingStyles = styled.span`
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 25px;
   .star {
     margin-left: 3px;
   }
